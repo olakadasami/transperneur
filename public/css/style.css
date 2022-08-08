@@ -47,11 +47,14 @@
 form {
   max-width: 500px;
   margin: 0 auto;
-  padding: 4rem 3rem;
+  padding: 15rem 3rem;
+}
+form h2 {
+  margin-bottom: 2rem;
 }
 form input {
   display: block;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 0.5rem 0 1.2rem 0;
   width: 100%;
   border-radius: 0.5rem;
@@ -73,6 +76,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
+  height: 10rem;
   background-color: #020230;
   position: fixed;
   top: 0;
@@ -402,6 +406,10 @@ nav .big-screen li {
 }
 .features__text {
   color: #10285d;
+}
+
+.container {
+  padding: 15rem 0;
 }
 
 * {
