@@ -1,0 +1,113 @@
+@use '../abstract/' as *;
+
+.footer {
+    padding: 5rem 5rem;
+    color: $color-footer;
+    background-color: $color-heading-blue;
+    background-image: url(/images/footer_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    @include slarge {
+        padding: 5rem 10rem;
+
+    }
+    
+    &__top {
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 5rem 5rem 5rem;
+        gap: 4rem;
+        border-bottom: .5px solid rgba($color-footer, .5);
+        
+        @include slarge {
+            justify-content: space-around;
+            flex-direction: row;
+
+        }
+    }
+
+    &__header {
+        margin-bottom: 2rem;
+        color: $color-white;
+        font-size: 2rem;
+    }
+    
+    &__bottom {
+        display: flex;
+        align-items: center;
+        padding: 4rem 0 0 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 2rem;
+        
+        @include slarge {
+            justify-content: space-between;
+            flex-direction: row;
+
+        }
+
+        p {
+            text-align: center;
+            width: 100%;
+            
+            @include slarge {
+                max-width: 65%;
+                text-align: start;
+
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 30%;
+
+
+
+            li {
+                margin: 0 .5rem;
+
+                a {
+    
+                    border: 1px solid $color-footer;
+                    border-radius: 50%;
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    width: 40px;
+    
+                    svg {
+                        width: 100%;
+                    }
+
+                    &:hover {
+                        background-color: rgba($color-footer, .5);
+                    }
+
+                    &:hover .social-links {
+                        fill: $color-white;
+                    }
+    
+                   
+                }
+            }
+        }
+    }
+
+    .social-links {
+        fill: $color-footer;
+
+    }
+
+    &__link {
+        transition: all .3s;
+        margin-bottom: 1rem;
+
+        &:hover {
+            transform: translateX(1rem);
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@use '../abstract/' as *;
+
+.btn {
+    padding: 1.2rem 3rem;
+    text-transform: uppercase;
+    font-family: oswald;
+    border-radius: 2rem;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+    &-red {
+        background-color: $button-bg;
+        border: 2px solid $button-border;
+        color: $color-white;
+
+        &::after {
+            content: "";
+            width: 0;
+            height: 100%;
+            display: inline-block;
+            border-radius: 2rem;
+            position: absolute;
+            background-color: rgba($button-border, 0.3);
+            top: 0;
+            left: 0;
+            z-index: 10;
+            color: $color-white;
+        }
+
+        &:hover::after {
+            animation: fadeInLeft .5s ease;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                width: 0;
+            }
+            60% {
+                width: 100%;
+            }
+            70% {
+                width: 95%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    }
+
+
+}

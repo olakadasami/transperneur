@@ -1,0 +1,25 @@
+{
+  "name": "user_auth",
+  "version": "1.0.0",
+  "description": "auth with jwt",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "scss": "sass -w sass/main.scss public/css/style.css" 
+  },
+  "author": "olaks",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.4",
+    "morgan": "^1.10.0",
+    "validator": "^13.7.0"
+  }
+}

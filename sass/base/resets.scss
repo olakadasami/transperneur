@@ -1,0 +1,40 @@
+@use '../abstract/' as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: $default-font;
+    line-height: 1.5;
+    position: relative;
+    font-family: muli;
+    margin-top: 6rem;
+}
+
+
+a , li {
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2 ,h3 {
+    font-family: oswald;
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(/fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: muli;
+    src: url(/fonts/Mulish/Mulish-VariableFont_wght.ttf);
+}

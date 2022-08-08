@@ -1,0 +1,126 @@
+@use '../abstract/' as *;
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    background-color: $color-bg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    color: white;
+
+    @include slarge {
+        padding: 2rem 10rem;
+        position: fixed;
+
+        
+    }
+
+
+    a {
+        color: $color-white;
+
+        &:hover {
+            opacity: .8;
+            text-decoration: underline;
+        }
+    }
+
+    .btn:hover {
+        text-decoration: none;
+    }
+
+
+    li {
+        margin-left: 1rem;
+
+        &:nth-last-child{
+            
+            @include slarge {
+             margin-left: 3rem;
+            }
+        }
+    }
+
+
+    .small-screen-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem;
+
+        @include slarge {
+            display: none;
+        }
+    }
+
+    
+    .menu {
+        cursor: pointer;
+
+        @include slarge {
+            display: none;
+        }
+    }
+
+    .big-screen {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        height: 75vh;
+        transition: all .3s ease;
+        color: white;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        &:target {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        div {
+            margin-bottom: 3rem;
+        }
+
+        li {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        @include slarge {
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            visibility: visible;
+            opacity: 1;
+            position: initial;
+            background-color: inherit;
+            height: fit-content;
+            max-width: 60%;
+
+            div {
+                margin: 0;
+            }
+
+            li {
+                margin-bottom: 0;
+                text-align: end;
+            }
+        }
+
+        @include xlarge {
+            max-width: 50%;
+        }
+
+    }
+
+}

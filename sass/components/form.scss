@@ -1,0 +1,27 @@
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+
+
+    input {
+        display: block;
+        padding: .5rem;
+        margin: .5rem 0 1.2rem 0;
+        width: 100%;
+        border-radius: .5rem;
+    }
+    
+    button {
+        padding: .4rem .8rem;
+        font-size: 16px;
+        color: #222;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    .error {
+        color: red;
+        padding: .5rem;
+    }
+}

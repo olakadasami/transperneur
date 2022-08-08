@@ -1,0 +1,83 @@
+@use '../abstract/' as *;
+.about {
+    display: flex;
+    padding: 10rem 5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $color-blue; 
+    line-height: 1.5;
+
+    
+    @include large {
+        padding: 10rem;
+
+    }
+    
+    @include xlarge {
+        justify-content: space-between;
+        padding: 10rem;
+        flex-direction: row;
+
+    }
+
+
+
+    &__left {
+        width: 100%;
+        margin-bottom: 5rem;
+        
+        @include xlarge {
+            padding-right: 2rem;
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+    
+    &__right {
+        width: 100%;
+        
+        @include xlarge {
+            padding-left: 2rem;
+            width: 50%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        font-size: 4.5rem;
+        text-align: center;
+
+        @include xlarge {
+            text-align: start;
+        }
+    }
+    
+    &__text {
+        color: $color-blue;
+        margin-bottom: 2rem;
+        
+        @include xlarge {
+            max-width: 70%;
+
+        }
+    }
+    
+    &__options {
+        color: $color-heading-blue;
+        margin-bottom: 5rem;
+    }
+    
+    &__heading-2 {
+        color: $color-heading-blue;
+        text-align: center;
+    
+        @include xlarge {
+            text-align: start;
+        }
+    }
+
+}

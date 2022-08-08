@@ -1,0 +1,44 @@
+@use '../abstract/' as *;
+
+.header {
+    height: 100vh;
+    background-color: $color-bg;
+    padding: 4rem;
+    position: relative;
+    color: $color-white;
+
+    
+    @include slarge {
+        padding: 10rem;
+
+    }
+
+    &__heading {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 1rem;
+        width: 100%;
+
+        h1 {
+            margin-bottom: 3rem;
+            font-size: 5rem;
+            
+            @include slarge {
+                font-size: 7rem;
+
+            }
+        }
+
+        p {
+            margin-bottom: 3rem;
+        }
+
+       &__btn {
+        padding: 3rem;
+        height: 5rem;
+
+       }
+
+    }
+}
