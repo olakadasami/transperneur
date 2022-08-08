@@ -17,7 +17,7 @@ nav {
         padding: 2rem 10rem;
         position: fixed;
 
-        
+
     }
 
 
@@ -38,10 +38,10 @@ nav {
     li {
         margin-left: 1rem;
 
-        &:nth-last-child{
-            
+        &:nth-last-child {
+
             @include slarge {
-             margin-left: 3rem;
+                margin-left: 3rem;
             }
         }
     }
@@ -58,7 +58,7 @@ nav {
         }
     }
 
-    
+
     .menu {
         cursor: pointer;
 
@@ -95,7 +95,7 @@ nav {
             text-align: center;
             margin-bottom: 2rem;
         }
-        
+
         @include slarge {
             justify-content: space-between;
             flex-direction: row;
